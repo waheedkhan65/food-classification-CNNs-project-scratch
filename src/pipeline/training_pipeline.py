@@ -101,7 +101,7 @@ def epoch_loop(EPOCHS, model, train_loader, test_loader, optimizer, criterion, d
 
 def main():
     # You can change the number of epochs as needed
-    epochs = 10
+    epochs = 120
     
 
     train_dir = "data/processed/train"
