@@ -28,10 +28,12 @@ def get_data_loaders(train_dir, test_dir, device, batch_size=32):
     test_data = ImageFolder(root=test_dir, transform=test_transform)
     train_loader = DataLoader(train_data, batch_size=32, shuffle=True,
                                generator=torch.Generator(device=device),
+                              pin_memory=True,
                               )
     test_loader = DataLoader(test_data, batch_size=32, shuffle=False,
                              
                                    generator=torch.Generator(device=device),
+                                   pin_memory=True,
                          )
     class_names = train_data.classes
     num_classes = len(class_names)
